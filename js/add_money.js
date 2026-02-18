@@ -1,21 +1,21 @@
-const optionClickSound = new Audio('./audio/option-btn-click-sound.wav');
-
+// add option-btn sound and add-money form show/hide //
 document.getElementById('add-money-option').addEventListener('click', function () {
-  optionClickSound.play();
   const addMoneySec = getId('add-money-sec');
   addMoneySec.classList.toggle('hidden');
-})
+});
 
+
+// the main event //
 const addMoneyBtn = getId("add-money-btn");
-const doneClickSound = new Audio('./audio/done-btn-click-sound.wav');
 
 addMoneyBtn.addEventListener("click", function () {
-  doneClickSound.play();
+  // get user value //
   const addMoneyBank = getValue("add-money-bank");
   const addMoneyNum = getValue("add-money-number");
   const addMoneyAmount = getValue("add-money-amount");
   const addMoneyPin = getValue("add-money-pin");
 
+  // set condition for select all item //
   if (addMoneyBank === "" && addMoneyNum === "" && addMoneyAmount === "" && addMoneyPin === "") {
     alert ('Select all the items !')
     return;
@@ -32,6 +32,7 @@ addMoneyBtn.addEventListener("click", function () {
     alert("Enter the PIN !");
   }
 
+  // input length validation and check limit //
   if (addMoneyNum.length !== 11) {
     alert("Number must be 11 characters !");
     return;
@@ -45,6 +46,7 @@ addMoneyBtn.addEventListener("click", function () {
     return;
   }
 
+  // number & pin validation and calculate and set the new balance //
   if (addMoneyNum === mainNum && addMoneyPin === mainPin) {
     const firstBalanceEl = document.getElementById('first-balance');
     let firstBalance = firstBalanceEl.innerText;

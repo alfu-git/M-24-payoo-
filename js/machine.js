@@ -1,4 +1,4 @@
-
+const firstBalance = getInnerText('first-balance');
 
 const mainNum = "01234567890";
 const mainPin = "1234";
