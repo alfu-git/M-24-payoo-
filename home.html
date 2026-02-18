@@ -37,7 +37,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body class="max-w-md mx-auto min-h-screen bg-base-200">
+  <body class="max-w-md pb-[120px] mx-auto min-h-screen bg-base-200">
     <header>
       <!-- header section -->
       <section class="py-2.5 px-5 bg-white border-b border-[#080808]/10">
@@ -48,7 +48,7 @@
             </div>
             <div>
               <span class="block text-neutral text-lg font-extrabold"
-                >$<span>45000</span>
+                >$<span id="first-balance">100000</span>
               </span>
               <span class="inline-block opacity-50">Available Balance</span>
             </div>
@@ -56,6 +56,7 @@
 
           <div>
             <button
+              id="logout-btn"
               class="btn bg-white rounded-lg font-medium opacity-60 hover:text-primary"
             >
               <a href="./index.html"
@@ -71,7 +72,7 @@
     </header>
 
     <main>
-      <!-- option section -->
+      <!-- transactions option section -->
       <section class="pt-8 pb-6 px-5 bg-white rounded-b-3xl">
         <div>
           <h1 class="max-w-fit text-2xl font-bold group">
@@ -87,6 +88,7 @@
 
           <div class="grid gap-4 grid-cols-3">
             <button
+              id="add-money-option"
               class="btn inline-block h-auto py-5 px-[26px] bg-white rounded-xl"
             >
               <div>
@@ -166,6 +168,74 @@
           </div>
         </div>
       </section>
+
+      <!-- add money form -->
+      <section id="add-money-sec" class="mt-[15px] px-5 hidden">
+        <div>
+          <h2 class="mb-4 text-lg font-semibold">Add Money</h2>
+
+          <fieldset
+            class="fieldset bg-base-100 border-none drop-shadow-md rounded-2xl w-full border p-7"
+          >
+            <label class="mb-1 text-base opacity-70 font-medium"
+              >Select A Bank</label
+            >
+            <select
+              id="add-money-bank"
+              class="select h-auto mb-4 p-4 w-full text-base bg-[#F4F5F7] border-none rounded-full"
+              required
+            >
+              <option value="" disabled selected>Select bank</option>
+              <option value="City Bank">City Bank</option>
+              <option value="Exim Bank">Exim Bank</option>
+              <option value="BRAC Bank">BRAC Bank</option>
+            </select>
+
+            <label class="mb-1 text-base opacity-70 font-medium"
+              >Bank Account Number</label
+            >
+            <input
+              type="number"
+              id="add-money-number"
+              class="mb-4 p-4 w-full text-base bg-[#F4F5F7] border-none rounded-full placeholder:text-base placeholder:opacity-60"
+              placeholder="Enter 11 digit account number"
+            />
+
+            <label class="mb-1 text-base opacity-70 font-medium"
+              >Amount to Add</label
+            >
+            <input
+              type="number"
+              id="add-money-amount"
+              class="mb-4 p-4 w-full text-base bg-[#F4F5F7] border-none rounded-full placeholder:text-base placeholder:opacity-60"
+              placeholder="Enter the amount"
+            />
+
+            <label class="mb-1 text-base opacity-70 font-medium"
+              >Pin Number</label
+            >
+            <input
+              type="password"
+              id="add-money-pin"
+              class="p-4 w-full text-base bg-[#F4F5F7] border-none rounded-full placeholder:text-base placeholder:opacity-60"
+              placeholder="Enter 4 digit pin number"
+            />
+
+            <button
+              id="add-money-btn"
+              class="btn mt-4 py-6 text-xl btn-primary rounded-full"
+            >
+              Add Money
+            </button>
+          </fieldset>
+        </div>
+      </section>
     </main>
+
+    <!-- machine js -->
+    <script src="./js/machine.js"></script>
+
+    <!-- add money js -->
+    <script src="./js/add_money.js"></script>
   </body>
 </html>

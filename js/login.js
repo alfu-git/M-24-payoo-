@@ -1,17 +1,12 @@
-const loginBtn = document.getElementById("login-btn");
-const clickSound = new Audio('./audio/login-button-click-sound.wav')
+const loginBtn = getId('login-btn');
+const loginClickSound = new Audio('./audio/login-button-click-sound.wav');
 
 loginBtn.addEventListener("click", function () {
-  clickSound.play();
+  loginClickSound.play();
+  
+  const inputNumValue = getValue('input-number');
 
-  const mainNum = "01234567890";
-  const mainPin = "1234";
-
-  const inputNumEl = document.getElementById("input-number");
-  const inputNumValue = inputNumEl.value.trim();
-
-  const inputPinEl = document.getElementById("input-pin");
-  const inputPinValue = inputPinEl.value.trim();
+  const inputPinValue = getValue('input-pin');
 
 
   if (inputNumValue.length !== 11 && inputPinValue.length !== 4) {
