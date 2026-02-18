@@ -1,5 +1,5 @@
 const loginBtn = document.getElementById("login-btn");
-const clickSound = new Audio('./audio/button-click-sound.wav')
+const clickSound = new Audio('./audio/login-button-click-sound.wav')
 
 loginBtn.addEventListener("click", function () {
   clickSound.play();
