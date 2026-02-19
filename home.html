@@ -59,12 +59,10 @@
               id="logout-btn"
               class="btn bg-white rounded-lg font-medium opacity-60 hover:text-primary"
             >
-              <a href="./index.html"
-                ><i
-                  class="fa-solid fa-arrow-right-from-bracket mr-1 transform scale-x-[-1]"
-                ></i>
-                Log Out</a
-              >
+              <i
+                class="fa-solid fa-arrow-right-from-bracket mr-1 transform scale-x-[-1]"
+              ></i>
+              Log Out
             </button>
           </div>
         </div>
@@ -87,7 +85,9 @@
           </p>
 
           <div class="grid gap-4 grid-cols-3">
-            <button id="add-money-option"
+            <!-- add money btn -->
+            <button
+              id="btn-1"
               class="btn inline-block h-auto py-5 px-[26px] bg-white rounded-xl"
             >
               <div>
@@ -100,7 +100,9 @@
               </div>
             </button>
 
-            <button id="cashout-option"
+            <!-- cashout btn -->
+            <button
+              id="btn-2"
               class="btn inline-block h-auto py-5 px-[26px] bg-white rounded-xl"
             >
               <div>
@@ -113,7 +115,9 @@
               </div>
             </button>
 
-            <button id="transfer-money-option"
+            <!-- transfer money btn -->
+            <button
+              id="btn-3"
               class="btn inline-block h-auto py-5 px-3 bg-white rounded-xl"
             >
               <div>
@@ -126,7 +130,8 @@
               </div>
             </button>
 
-            <button
+            <!-- get bonus btn -->
+            <button id="btn-4"
               class="btn inline-block h-auto py-5 px-[26px] bg-white rounded-xl"
             >
               <div>
@@ -139,7 +144,8 @@
               </div>
             </button>
 
-            <button
+            <!-- pay bill btn -->
+            <button id="btn-5"
               class="btn inline-block h-auto py-5 px-[26px] bg-white rounded-xl"
             >
               <div>
@@ -152,7 +158,8 @@
               </div>
             </button>
 
-            <button
+            <!-- transactions btn -->
+            <button id="btn-6"
               class="btn inline-block h-auto py-5 px-[26px] bg-white rounded-xl"
             >
               <div>
@@ -169,7 +176,7 @@
       </section>
 
       <!-- add money form -->
-      <section id="add-money-sec" class="mt-[15px] px-5 hidden">
+      <section id="form-1" class="mt-[15px] px-5 hidden">
         <div>
           <h2 class="mb-4 text-lg font-semibold">Add Money</h2>
 
@@ -182,7 +189,6 @@
             <select
               id="add-money-bank"
               class="select h-auto mb-4 p-4 w-full text-base bg-[#F4F5F7] border-none rounded-full"
-              required
             >
               <option value="" disabled selected>Select bank</option>
               <option value="City Bank">City Bank</option>
@@ -231,7 +237,7 @@
       </section>
 
       <!-- cashout form -->
-      <section id="cashout-sec" class="mt-[15px] px-5 hidden">
+      <section id="form-2" class="mt-[15px] px-5 hidden">
         <div>
           <h2 class="mb-4 text-lg font-semibold">Cash Out</h2>
 
@@ -248,9 +254,7 @@
               placeholder="Enter 11 digit number"
             />
 
-            <label class="mb-1 text-base opacity-70 font-medium"
-              >Amount</label
-            >
+            <label class="mb-1 text-base opacity-70 font-medium">Amount</label>
             <input
               type="number"
               id="cashout-amount"
@@ -279,7 +283,7 @@
       </section>
 
       <!-- transfer money form -->
-      <section id="transfer-money-sec" class="mt-[15px] px-5 hidden">
+      <section id="form-3" class="mt-[15px] px-5 hidden">
         <div>
           <h2 class="mb-4 text-lg font-semibold">Transfer Money</h2>
 
@@ -296,9 +300,7 @@
               placeholder="Enter 11 digit number"
             />
 
-            <label class="mb-1 text-base opacity-70 font-medium"
-              >Amount</label
-            >
+            <label class="mb-1 text-base opacity-70 font-medium">Amount</label>
             <input
               type="number"
               id="transfer-money-amount"
@@ -326,5 +328,15 @@
         </div>
       </section>
     </main>
+
+
+    <!-- machine js -->
+    <script src="./js/machine.js"></script>
+
+    <!-- logout js -->
+    <script src="./js/logout.js"></script>
+
+    <!-- add-money js -->
+    <script src="./js/add-money.js"></script>
   </body>
 </html>
