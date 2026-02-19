@@ -68,6 +68,14 @@ addMoneyBtn.addEventListener('click', function () {
   document.getElementById('add-money-amount').value = '';
   document.getElementById('add-money-pin').value = '';
 
+
+  const historyDiv = getId('history-div');
+  const addMoneyImg = getInnerText('add-money-img');
+  const childDiv = document.createElement('div');
+  childDiv.innerText = addMoneyImg;
+  historyDiv.appendChild(childDiv);
+
+
     return;
   }
   else if (addMoneyNum !== mainNum) {

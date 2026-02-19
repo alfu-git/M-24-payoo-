@@ -48,7 +48,7 @@
             </div>
             <div>
               <span class="block text-neutral text-lg font-extrabold"
-                >$<span id="first-balance">100000</span>
+                >$<span id="first-balance" >100000</span>
               </span>
               <span class="inline-block opacity-50">Available Balance</span>
             </div>
@@ -86,11 +86,11 @@
 
           <div class="grid gap-4 grid-cols-3">
             <!-- add money btn -->
-            <button
+            <button onclick="showOnly('form-1')"
               id="btn-1"
               class="btn inline-block h-auto py-5 px-[26px] bg-white rounded-xl"
             >
-              <div>
+              <div id="add-money-img">
                 <img
                   class="mx-auto mb-2"
                   src="./images/opt-1.png"
@@ -101,7 +101,7 @@
             </button>
 
             <!-- cashout btn -->
-            <button
+            <button onclick="showOnly('form-2')"
               id="btn-2"
               class="btn inline-block h-auto py-5 px-[26px] bg-white rounded-xl"
             >
@@ -116,7 +116,7 @@
             </button>
 
             <!-- transfer money btn -->
-            <button
+            <button onclick="showOnly('form-3')"
               id="btn-3"
               class="btn inline-block h-auto py-5 px-3 bg-white rounded-xl"
             >
@@ -131,7 +131,7 @@
             </button>
 
             <!-- get bonus btn -->
-            <button id="btn-4"
+            <button onclick="showOnly('form-4')" id="btn-4"
               class="btn inline-block h-auto py-5 px-[26px] bg-white rounded-xl"
             >
               <div>
@@ -145,7 +145,7 @@
             </button>
 
             <!-- pay bill btn -->
-            <button id="btn-5"
+            <button onclick="showOnly('form-5')" id="btn-5"
               class="btn inline-block h-auto py-5 px-[26px] bg-white rounded-xl"
             >
               <div>
@@ -159,7 +159,7 @@
             </button>
 
             <!-- transactions btn -->
-            <button id="btn-6"
+            <button onclick="showOnly('form-6')" id="btn-6"
               class="btn inline-block h-auto py-5 px-[26px] bg-white rounded-xl"
             >
               <div>
@@ -177,7 +177,7 @@
 
 
       <!-- add money form -->
-      <section id="form-1" class="mt-[15px] px-5 hidden">
+      <section id="form-1" class="mt-[15px] px-5 form hidden">
         <div>
           <h2 class="mb-4 text-lg font-semibold">Add Money</h2>
 
@@ -238,7 +238,7 @@
       </section>
 
       <!-- cashout form -->
-      <section id="form-2" class="mt-[15px] px-5 hidden">
+      <section id="form-2" class="mt-[15px] px-5 form hidden">
         <div>
           <h2 class="mb-4 text-lg font-semibold">Cash Out</h2>
 
@@ -284,7 +284,7 @@
       </section>
 
       <!-- transfer money form -->
-      <section id="form-3" class="mt-[15px] px-5 hidden">
+      <section id="form-3" class="mt-[15px] px-5 form hidden">
         <div>
           <h2 class="mb-4 text-lg font-semibold">Transfer Money</h2>
 
@@ -330,7 +330,7 @@
       </section>
 
       <!-- get bonus form -->
-      <section id="form-4" class="mt-[15px] px-5 hidden">
+      <section id="form-4" class="mt-[15px] px-5 form hidden">
         <div>
           <h2 class="mb-4 text-lg font-semibold">Get Bonus</h2>
 
@@ -358,7 +358,7 @@
       </section>
 
       <!-- pay bill form -->
-      <section id="form-5" class="mt-[15px] px-5 hidden">
+      <section id="form-5" class="mt-[15px] px-5 form hidden">
         <div>
           <h2 class="mb-4 text-lg font-semibold">Pay Bill</h2>
 
@@ -417,6 +417,18 @@
           </fieldset>
         </div>
       </section>
+
+      <!-- transactions form -->
+      <section id="form-6" class="mt-[15px] px-5 form hidden">
+        <div>
+          <div class="mb-4 flex items-center justify-between">
+            <h2 class="text-lg font-semibold">Transaction History</h2>
+            <span class="inline-block"><a href="#" class="text-sm opacity-50">View All</a></span>
+          </div>
+
+          <div id="history-div"></div>
+        </div>
+      </section>
     </main>
 
 
@@ -440,5 +452,8 @@
 
     <!-- pay-bill js -->
     <script src="./js/pay-bill.js"></script>
+
+    <!-- transactions js -->
+    <script src="./js/transactions.js"></script>
   </body>
 </html>

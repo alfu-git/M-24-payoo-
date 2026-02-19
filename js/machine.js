@@ -40,3 +40,19 @@ function balanceDecrease (amount) {
 function setBalance (newAmount) {
   getId('first-balance').innerText = newAmount;
 }
+
+// SHOW/HIDE FORM //
+function showOnly (id) {
+  // GET ALL FORMS 
+  const forms = document.querySelectorAll('.form');
+
+  // PICK EVERY SINGLE FORM 
+  forms.forEach(form => {
+    if (form.id === id) {
+      form.classList.toggle('hidden');
+    }
+    else {
+      form.classList.add('hidden');
+    }
+  })
+}

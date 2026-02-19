@@ -1,3 +1,9 @@
 *{
   font-family: "Outfit", sans-serif;
 }
+
+.transactions-div{
+  background-color: white;
+  padding: 13px 16px;
+  border-radius: 12px;
+}
