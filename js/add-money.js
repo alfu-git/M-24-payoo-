@@ -1,21 +1,8 @@
-// OPTION BTN SOUND //
-const addMoneyOption = getId('btn-1'); 
-
-const optionBtnSound = new Audio('./audio/option-btn-click-sound.wav');
-
-addMoneyOption.addEventListener('click', function () {
-  optionBtnSound.play();
-})
-
 // MAIN EVENT //
 const addMoneyBtn = getId('add-money-btn');
-const addMoneyDoneSound = new Audio('./audio/done-btn-click-sound.wav');
+
 
 addMoneyBtn.addEventListener('click', function () {
-  // ADD MONEY BTN SOUND //
-    addMoneyDoneSound.play();
-
-
   // GET USER VALUE //
   const addMoneyBank = getValue('add-money-bank');
   const addMoneyNum = getValue('add-money-number');
