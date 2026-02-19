@@ -46,8 +46,8 @@ cashoutBtn.addEventListener('click', function () {
   }
 
 
-  // NUMBER & PIN VALIDATION //
-  if (cashoutNum === mainNum && cashoutPin === mainPin) {
+  // PIN VALIDATION //
+  if (cashoutPin === mainPin) {
     // CALCULATE //
     const newBalance = balanceDecrease(cashoutAmount);
     setBalance(newBalance);
@@ -56,23 +56,28 @@ cashoutBtn.addEventListener('click', function () {
       New balance is: ${newBalance}$
       `);
 
-  // REFRESH ALL VALUE //
-  document.getElementById('cashout-number').value = '';
-  document.getElementById('cashout-amount').value = '';
-  document.getElementById('cashout-pin').value = '';
+
+    // SEND THE CASHOUT HISTORY
+    setCashoutHistory (cashoutAmount, newBalance);
+
+
+    // REFRESH ALL VALUE //
+    document.getElementById('cashout-number').value = '';
+    document.getElementById('cashout-amount').value = '';
+    document.getElementById('cashout-pin').value = '';
 
     return;
-  }
-  else if (cashoutNum !== mainNum) {
-    alert ('Wrong number!');
-    return;
-  }
-  else if (cashoutPin !== mainPin) {
-    alert ('Wrong PIN!');
-    return;
-  }
-  else {
-    alert ('Wrong number & PIN!');
-    return;
-  }
+    }
+    else if (cashoutNum !== mainNum) {
+      alert ('Wrong number!');
+      return;
+    }
+    else if (cashoutPin !== mainPin) {
+      alert ('Wrong PIN!');
+      return;
+    }
+    else {
+      alert ('Wrong number & PIN!');
+      return;
+    }
 })
