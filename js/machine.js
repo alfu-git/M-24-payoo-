@@ -73,3 +73,15 @@ optionBtns.forEach(optionBtn => {
     optionBtnSound.play();
   })
 })
+
+
+// ADD SOUND FOR TRANSACTIONS DONE BTN //
+const doneBtns = document.querySelectorAll('.done-btn');
+const doneBtnSound = new Audio('./audio/done-btn-click-sound.wav');
+
+doneBtns.forEach(doneBtn => {
+  doneBtn.addEventListener('click', function () {
+    doneBtnSound.currentTime = 0;
+    doneBtnSound.play();
+  })
+})
