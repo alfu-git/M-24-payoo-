@@ -87,8 +87,7 @@
           </p>
 
           <div class="grid gap-4 grid-cols-3">
-            <button
-              id="add-money-option"
+            <button id="add-money-option"
               class="btn inline-block h-auto py-5 px-[26px] bg-white rounded-xl"
             >
               <div>
@@ -114,7 +113,7 @@
               </div>
             </button>
 
-            <button
+            <button id="transfer-money-option"
               class="btn inline-block h-auto py-5 px-3 bg-white rounded-xl"
             >
               <div>
@@ -278,17 +277,54 @@
           </fieldset>
         </div>
       </section>
+
+      <!-- transfer money form -->
+      <section id="transfer-money-sec" class="mt-[15px] px-5 hidden">
+        <div>
+          <h2 class="mb-4 text-lg font-semibold">Transfer Money</h2>
+
+          <fieldset
+            class="fieldset bg-base-100 border-none drop-shadow-md rounded-2xl w-full border p-7"
+          >
+            <label class="mb-1 text-base opacity-70 font-medium"
+              >User Account Number</label
+            >
+            <input
+              type="number"
+              id="transfer-money-number"
+              class="mb-4 p-4 w-full text-base bg-[#F4F5F7] border-none rounded-full placeholder:text-base placeholder:opacity-60"
+              placeholder="Enter 11 digit number"
+            />
+
+            <label class="mb-1 text-base opacity-70 font-medium"
+              >Amount</label
+            >
+            <input
+              type="number"
+              id="transfer-money-amount"
+              class="mb-4 p-4 w-full text-base bg-[#F4F5F7] border-none rounded-full placeholder:text-base placeholder:opacity-60"
+              placeholder="Enter amount to transfer"
+            />
+
+            <label class="mb-1 text-base opacity-70 font-medium"
+              >Pin Number</label
+            >
+            <input
+              type="password"
+              id="transfer-money-pin"
+              class="p-4 w-full text-base bg-[#F4F5F7] border-none rounded-full placeholder:text-base placeholder:opacity-60"
+              placeholder="Enter 4 digit pin number"
+            />
+
+            <button
+              id="transfer-money-btn"
+              class="btn mt-4 py-6 text-xl btn-primary rounded-full"
+            >
+              Send Now
+            </button>
+          </fieldset>
+        </div>
+      </section>
     </main>
-
-
-    
-    <!-- machine js -->
-    <script src="./js/machine.js"></script>
-
-    <!-- add money js -->
-    <script src="./js/add_money.js"></script>
-
-    <!-- cashout js -->
-    <script src="./js/cashout.js"></script>
   </body>
 </html>
