@@ -1,6 +1,7 @@
-// MAIN NUMBER & PIN //
+// MAIN NUMBER & PIN & BONUS COUPON //
 const mainNum = '01234567890';
 const mainPin = '1234';
+const bonusCoupon = '7676';
 
 // FIRST BALANCE //
 const firstBalance = Number(getInnerText('first-balance'));
