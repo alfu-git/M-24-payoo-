@@ -85,3 +85,35 @@ doneBtns.forEach(doneBtn => {
     doneBtnSound.play();
   })
 })
+
+
+// CREATE ADD MONEY HISTORY FUNCTION //
+function setAddMoneyHistory (amount, bank, newBalance) {
+  // GET THE MAIN HISTORY DIV
+    const historyDiv = getId('history-div');
+
+    // CREATE A HISTORY CARD & SET HIS INNER HTML
+    const historyCard = document.createElement('div');
+    historyCard.classList.add('transactions-div');
+    historyCard.innerHTML = `
+    <div class = "flex items-center justify-between">
+      <div class = "flex gap-2 items-center">
+        <div class = "p-2.5 bg-base-200 w-[45px] h-[45px] rounded-full">
+          <img class="mx-auto mb-2" src="./images/opt-1.png" alt="Add Money logo"/>
+        </div>
+  
+        <div>
+          <p class = "font">${amount}$ successfully add to your account form ${bank}</p>
+          <p class = "font">New balance is: ${newBalance}$</p>
+        </div>
+      </div>
+  
+      <div>
+        <a href="#"><i class="fa-solid fa-ellipsis rotate-90"></i></a>
+      </div>
+    </div>
+    `
+
+    // THEN SEND THE HISTORY CARD TO MAIN HISTORY DIV
+    historyDiv.appendChild(historyCard);
+}

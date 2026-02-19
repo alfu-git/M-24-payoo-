@@ -62,19 +62,15 @@ addMoneyBtn.addEventListener('click', function () {
       New balance is: ${newBalance}$
       `);
 
+
+    // SEND TO TRANSACTIONS HISTORY //
+    setAddMoneyHistory(addMoneyAmount, addMoneyBank, newBalance);
+
   // REFRESH ALL VALUE //
   document.getElementById('add-money-bank').value = '';
   document.getElementById('add-money-number').value = '';
   document.getElementById('add-money-amount').value = '';
   document.getElementById('add-money-pin').value = '';
-
-
-  const historyDiv = getId('history-div');
-  const addMoneyImg = getInnerText('add-money-img');
-  const childDiv = document.createElement('div');
-  childDiv.innerText = addMoneyImg;
-  historyDiv.appendChild(childDiv);
-
 
     return;
   }
