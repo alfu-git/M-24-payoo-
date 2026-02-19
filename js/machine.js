@@ -3,6 +3,7 @@ const mainNum = '01234567890';
 const mainPin = '1234';
 const bonusCoupon = '7676';
 
+
 // FIRST BALANCE //
 const firstBalance = Number(getInnerText('first-balance'));
 
@@ -12,12 +13,14 @@ function getId (id) {
   return document.getElementById(id);
 }
 
+
 // GET INNER TEXT //
 function getInnerText (id) {
   const el = document.getElementById(id);
   const text = el.innerText;
   return text;
 }
+
 
 // GET VALUE //
 function getValue (id) {
@@ -26,10 +29,12 @@ function getValue (id) {
   return value;
 }
 
+
 // AMOUNT INCREASING //
 function balanceIncrease (amount) {
   return Number(amount) + firstBalance;
 }
+
 
 // AMOUNT DECREASING //
 function balanceDecrease (amount) {
@@ -56,3 +61,15 @@ function showOnly (id) {
     }
   })
 }
+
+
+// ADD SOUND FOR BTN CLICK //
+const optionBtns = document.querySelectorAll('.option-btn');
+const optionBtnSound = new Audio('./audio/option-btn-click-sound.wav');
+
+optionBtns.forEach(optionBtn => {
+  optionBtn.addEventListener('click', function () {
+    optionBtnSound.currentTime = 0;
+    optionBtnSound.play();
+  })
+})
