@@ -175,6 +175,7 @@
         </div>
       </section>
 
+
       <!-- add money form -->
       <section id="form-1" class="mt-[15px] px-5 hidden">
         <div>
@@ -329,7 +330,7 @@
       </section>
 
       <!-- get bonus form -->
-      <section id="form-3" class="mt-[15px] px-5 hidden">
+      <section id="form-4" class="mt-[15px] px-5 hidden">
         <div>
           <h2 class="mb-4 text-lg font-semibold">Get Bonus</h2>
 
@@ -355,6 +356,67 @@
           </fieldset>
         </div>
       </section>
+
+      <!-- pay bill form -->
+      <section id="form-5" class="mt-[15px] px-5 hidden">
+        <div>
+          <h2 class="mb-4 text-lg font-semibold">Pay Bill</h2>
+
+          <fieldset
+            class="fieldset bg-base-100 border-none drop-shadow-md rounded-2xl w-full border p-7"
+          >
+            <label class="mb-1 text-base opacity-70 font-medium"
+              >Select To Pay</label
+            >
+            <select
+              id="pay-bill-option"
+              class="select h-auto mb-4 p-4 w-full text-base bg-[#F4F5F7] border-none rounded-full"
+            >
+              <option value="" disabled selected>Select</option>
+              <option value="Bank Deposit">Bank Deposit</option>
+              <option value="Electricity Bill">Electricity Bill</option>
+              <option value="Gas Bill">Gas Bill</option>
+            </select>
+
+            <label class="mb-1 text-base opacity-70 font-medium"
+              >Biller Account Number</label
+            >
+            <input
+              type="number"
+              id="pay-bill-number"
+              class="mb-4 p-4 w-full text-base bg-[#F4F5F7] border-none rounded-full placeholder:text-base placeholder:opacity-60"
+              placeholder="Enter account number"
+            />
+
+            <label class="mb-1 text-base opacity-70 font-medium"
+              >Amount to Pay</label
+            >
+            <input
+              type="number"
+              id="pay-bill-amount"
+              class="mb-4 p-4 w-full text-base bg-[#F4F5F7] border-none rounded-full placeholder:text-base placeholder:opacity-60"
+              placeholder="Add Amount to pay"
+            />
+
+            <label class="mb-1 text-base opacity-70 font-medium"
+              >PIN Number</label
+            >
+            <input
+              type="password"
+              id="pay-bill-pin"
+              class="p-4 w-full text-base bg-[#F4F5F7] border-none rounded-full placeholder:text-base placeholder:opacity-60"
+              placeholder="Enter 4 digit pin number"
+            />
+
+            <button
+              id="pay-bill-btn"
+              class="btn mt-4 py-6 text-xl btn-primary rounded-full"
+            >
+              Pay Now
+            </button>
+          </fieldset>
+        </div>
+      </section>
     </main>
 
 
@@ -375,5 +437,8 @@
 
     <!-- get-bonus js -->
     <script src="./js/get-bonus.js"></script>
+
+    <!-- pay-bill js -->
+    <script src="./js/pay-bill.js"></script>
   </body>
 </html>
