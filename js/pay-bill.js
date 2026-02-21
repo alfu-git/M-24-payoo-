@@ -51,7 +51,7 @@ payBillBtn.addEventListener('click', function () {
   }
 
 
-  // NUMBER & PIN VALIDATION //
+  // PIN VALIDATION //
   if (payBillPin === mainPin) {
     // CALCULATE //
     const newBalance = balanceDecrease(payBillAmount);
@@ -61,12 +61,15 @@ payBillBtn.addEventListener('click', function () {
       New balance is: ${newBalance}$
       `);
 
-  // REFRESH ALL VALUE //
-  document.getElementById('pay-bill-option').value = '';
-  document.getElementById('pay-bill-number').value = '';
-  document.getElementById('pay-bill-amount').value = '';
-  document.getElementById('pay-bill-pin').value = '';
+    // SEND HISTORY
+    getBonusHistory(payBillAmount, payBillOption, newBalance);
 
+    // REFRESH ALL VALUE //
+    document.getElementById('pay-bill-option').value = '';
+    document.getElementById('pay-bill-number').value = '';
+    document.getElementById('pay-bill-amount').value = '';
+    document.getElementById('pay-bill-pin').value = '';
+  
     return;
   }
   else {
