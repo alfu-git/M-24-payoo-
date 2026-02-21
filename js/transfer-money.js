@@ -46,7 +46,7 @@ transferMoneyBtn.addEventListener('click', function () {
   }
 
 
-  // NUMBER & PIN VALIDATION //
+  // VALIDATION //
   if (transferMoneyPin === mainPin) {
     // CALCULATE //
     const newBalance = balanceDecrease(transferMoneyAmount);
@@ -55,12 +55,17 @@ transferMoneyBtn.addEventListener('click', function () {
       ${transferMoneyAmount}$ transfer to ${transferMoneyNum} successfully from your account. 
       New balance is: ${newBalance}$
       `);
+    
 
-  // REFRESH ALL VALUE //
-  document.getElementById('transfer-money-number').value = '';
-  document.getElementById('transfer-money-amount').value = '';
-  document.getElementById('transfer-money-pin').value = '';
+    // SEND THE HISTORY 
+    transferMoneyHistory(transferMoneyAmount, transferMoneyNum, newBalance);
 
+    
+    // REFRESH ALL VALUE 
+    document.getElementById('transfer-money-number').value = '';
+    document.getElementById('transfer-money-amount').value = '';
+    document.getElementById('transfer-money-pin').value = '';
+  
     return;
   }
   else if (transferMoneyNum !== mainNum) {

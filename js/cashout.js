@@ -68,10 +68,6 @@ cashoutBtn.addEventListener('click', function () {
 
     return;
     }
-    else if (cashoutNum !== mainNum) {
-      alert ('Wrong number!');
-      return;
-    }
     else if (cashoutPin !== mainPin) {
       alert ('Wrong PIN!');
       return;

@@ -149,3 +149,35 @@ function setCashoutHistory (amount, newBalance) {
     // THEN SEND THE HISTORY CARD TO MAIN HISTORY DIV
     historyDiv.appendChild(historyCard);
 }
+
+
+// CREATE TRANSFER MONEY FUNCTION //
+function transferMoneyHistory (amount, number, newBalance) {
+  // GET THE MAIN HISTORY DIV
+    const historyDiv = getId('history-div');
+
+    // CREATE A HISTORY CARD & SET HIS INNER HTML
+    const historyCard = document.createElement('div');
+    historyCard.classList.add('transactions-div');
+    historyCard.innerHTML = `
+    <div class = "flex gap-1 items-center justify-between">
+      <div class = "flex gap-2 items-center">
+        <div class = "p-2.5 bg-base-200 w-[45px] h-[45px] rounded-full">
+          <img class="mx-auto mb-2" src="./images/opt-3.png"alt="Transfer Money logo"/> 
+        </div>
+  
+        <div>
+          <p class = "font">${amount}$ transfer to ${number} successfully from your account</p>
+          <p class = "font">New balance is: ${newBalance}$</p>
+        </div>
+      </div>
+  
+      <div>
+        <a href="#"><i class="fa-solid fa-ellipsis rotate-90"></i></a>
+      </div>
+    </div>
+    `
+
+    // THEN SEND THE HISTORY CARD TO MAIN HISTORY DIV
+    historyDiv.appendChild(historyCard);
+}
