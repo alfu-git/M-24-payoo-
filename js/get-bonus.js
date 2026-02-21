@@ -30,10 +30,16 @@ getBonusBtn.addEventListener('click', function () {
       Congratulations! You got bonus ${bonus}$
       New balance is: ${newBalance}$
       `);
+    
 
+    // SEND HISTORY
+    getBonusHistory(bonus, newBalance);
+
+
+    
   // REFRESH ALL VALUE //
   document.getElementById('get-bonus-number').value = '';
-    return;
+  return;
   }
   else if (getBonusNum !== bonusCoupon) {
     alert ('Wrong coupon!');
